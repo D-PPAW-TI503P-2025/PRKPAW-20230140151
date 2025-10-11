@@ -5,7 +5,7 @@ Tampilan Endpoint create Book:
 ## 1️⃣ GET /api/books
 ![Tampilan Endpoint Create](ss/endpoin_read.png)
 
-## 2️⃣ POSY /api/books
+## 2️⃣ POST /api/books
 ![Tampilan Endpoint Read](ss/endpoin_create.png)
 
 ## 3️⃣ PUT /api/books/:id

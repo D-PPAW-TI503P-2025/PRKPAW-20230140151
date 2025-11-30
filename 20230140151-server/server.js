@@ -29,4 +29,4 @@ app.use("/api/reports", reportRoutes);
 app.use('/api/auth', authRoutes);
 app.listen(PORT, () => {
   console.log(`Express server running at http://localhost:${PORT}/`);
-});
+}); 

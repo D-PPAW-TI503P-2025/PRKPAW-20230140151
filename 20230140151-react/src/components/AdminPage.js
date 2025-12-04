@@ -112,12 +112,13 @@ const AdminPage = () => {
                 <th className="border border-amber-300 p-2">Check-Out</th>
                 <th className="border border-amber-300 p-2">Latitude</th>
                 <th className="border border-amber-300 p-2">Longitude</th>
+                <th className="border border-amber-300 p-2">Foto</th>
               </tr>
             </thead>
             <tbody>
               {reports.length === 0 ? (
                 <tr>
-                  <td colSpan="8" className="text-center p-4">
+                  <td colSpan="9" className="text-center p-4">
                     Tidak ada data
                   </td>
                 </tr>
@@ -145,6 +146,17 @@ const AdminPage = () => {
                     </td>
                     <td className="border border-amber-300 p-2">
                       {item.longitude ?? "-"}
+                    </td>
+                    <td className="border border-amber-300 p-2">
+                      {item.buktiFoto ? (
+                        <img
+                          src={`http://localhost:3001/${item.buktiFoto}`}
+                          alt="Bukti Foto"
+                          className="w-24 h-24 object-cover rounded"
+                        />
+                      ) : (
+                        "-"
+                      )}
                     </td>
                   </tr>
                 ))

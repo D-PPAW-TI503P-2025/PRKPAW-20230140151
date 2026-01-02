@@ -10,6 +10,7 @@ const morgan = require("morgan");
 const presensiRoutes = require("./routes/presensi");
 const reportRoutes = require("./routes/reports");
 const authRoutes = require('./routes/auth');
+const iotRoutes = require("./routes/iot");
 
 // Middleware
 app.use(cors());
@@ -27,6 +28,9 @@ app.use("/api/books", ruteBuku);
 app.use("/api/presensi", presensiRoutes);
 app.use("/api/reports", reportRoutes);
 app.use('/api/auth', authRoutes);
+app.use("/api/iot", iotRoutes);
+
+
 
 // Tambahan: folder uploads agar bisa diakses dari browser
 const path = require('path');

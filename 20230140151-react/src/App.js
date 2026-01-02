@@ -5,16 +5,19 @@ import RegisterPage from "./components/RegisterPage";
 import DashboardPage from "./components/DashboardPage";
 import PresensiPage from "./components/PresensiPage";
 import AdminPage from "./components/AdminPage";
-import ReportPage from "./components/ReportPage"; // Tambah ReportPage
+import ReportPage from "./components/ReportPage";
+import SensorPage from "./components/SensorPage"; // ✅ TAMBAHAN
 
 function App() {
   // Navbar links
   const navLinks = [
     { path: "/login", label: "Login", bg: "bg-amber-400", hover: "hover:bg-amber-500" },
     { path: "/register", label: "Register", bg: "bg-yellow-300", hover: "hover:bg-yellow-400" },
+    { path: "/dashboard", label: "Dashboard", bg: "bg-amber-300", hover: "hover:bg-amber-400" },
     { path: "/presensi", label: "Presensi", bg: "bg-amber-300", hover: "hover:bg-amber-400" },
+    { path: "/monitoring", label: "Monitoring", bg: "bg-orange-400", hover: "hover:bg-orange-500" }, // ✅ TAMBAHAN
     { path: "/admin", label: "Admin", bg: "bg-amber-400", hover: "hover:bg-amber-500" },
-    { path: "/laporan", label: "Laporan", bg: "bg-amber-300", hover: "hover:bg-amber-400" }, // Link Laporan
+    { path: "/laporan", label: "Laporan", bg: "bg-amber-300", hover: "hover:bg-amber-400" },
   ];
 
   return (
@@ -44,8 +47,9 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/presensi" element={<PresensiPage />} />
+            <Route path="/monitoring" element={<SensorPage />} /> {/* ✅ TAMBAHAN */}
             <Route path="/admin" element={<AdminPage />} />
-            <Route path="/laporan" element={<ReportPage />} /> {/* Route Laporan */}
+            <Route path="/laporan" element={<ReportPage />} />
           </Routes>
         </div>
       </div>

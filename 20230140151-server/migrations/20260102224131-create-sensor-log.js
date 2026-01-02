@@ -18,6 +18,10 @@ module.exports = {
       cahaya: {
         type: Sequelize.INTEGER
       },
+      motion: {                 // ✅ TAMBAHAN
+        type: Sequelize.INTEGER,
+        defaultValue: 0
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
